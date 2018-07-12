@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let title = src.titleTextField.text
         let date = src.datePicker.date
         let notes = src.notesTextView.text
-        print(title, notes, date)
+        print(title!, notes!, date)
         
         // init newEntity
         let newList = List(context: context)
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
     }
 }
 
+// extension tables
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
